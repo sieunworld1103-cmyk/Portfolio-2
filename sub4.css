@@ -1,0 +1,352 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* font-family: "Playfair Display", serif; */
+@font-face {
+    font-family: 'MaruBuri';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+    font-weight: 400;
+    font-display: swap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MaruBuri';
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    display: block;
+}
+body{
+    background-color: #faf9f6;
+}
+#footer{
+  background-color: #6B4F3F;
+}
+.container{
+  margin: 0 auto;
+  width: 1440px;
+}
+/* header */
+.header{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F5E6CC;
+}
+.header .logo{
+  width: 200px;
+}
+.header .logo img{
+  padding: 10px;
+}
+.header .nav{
+  width: 60%;
+  text-align: center;
+}
+.header .nav ul{}
+.header .nav ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .nav ul li a{
+  width: 200px;
+  color: #6B4F3F;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  padding: 10px 0;
+  position: relative;
+}
+.header .nav ul li a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #6B4F3F;
+  transform: scaleX(0);
+  transition: all .3s;
+}
+.header .nav ul li a:hover::before{
+  transform: scaleX(80%);
+}
+.header .login{
+  width: 20%;
+  color: #6B4F3F;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* contents1 */
+.contents1{
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 0;
+  background-color: #F5E6CC;
+}
+.contents1 h1{
+  font-size: 80px;
+  font-weight: normal;
+  color: #6B4F3F;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  padding: 100px 0;
+  font-weight: 700;
+}
+.contents1 p{
+  font-size: 60px;
+  font-weight: normal;
+  color: #6B4F3F;
+  font-weight: 600;
+}
+.contents1 img{
+  width: 582px;
+  height: 771px;
+  border-radius: 80px;
+}
+
+/* contents2 */
+.contents2{
+  padding: 50px 0;
+  text-align: center;
+}
+.search_box{
+  display: flex;
+  position: relative;
+  width: 1440px;
+}
+.search_box i{
+  color: #6B4F3F;
+  font-size: 20px;
+}
+.search{
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  border: 2px solid #6B4F3F;
+  border-radius: 30px;
+  font-size: 18px;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.3s ease;
+  padding-right: 52px;
+}
+
+.search:focus{
+  border-color: #8B6F47;
+  box-shadow: 0 0 10px rgba(107, 79, 63, 0.3);
+}
+
+.search::placeholder{
+  color: #999;
+}
+.search_box a{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+.contents2 .cont2_menu_box{
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #6B4F3F;
+}
+.cont2_menu_box .btn li a{
+  display: inline-block;
+  color: #6B4F3F;
+  padding: 10px 20px;
+  margin: 0 20px;
+  font-weight: 500;
+  position: relative;
+}
+.cont2_menu_box .btn li a::after{
+  content: "";
+  width: 1px;
+  height: 25px;
+  background-color: #6B4F3F;
+  position: absolute;
+  top: 8px;
+  right: -23px;
+}
+.cont2_menu_box .btn li a:last-child::after{
+  display: none;
+}
+.cont2_menu_box .btn li a:hover{
+  color: #F5E6CC;
+  background-color: #6B4F3F;
+  border-radius: 12px;
+}
+.cont2_menu_box .btn li a.active{
+  color: #F5E6CC;
+  background-color: #6B4F3F;
+  border-radius: 12px;
+}
+.cont{
+  margin-top: 30px;
+  display: none;
+  justify-content: space-between;
+  border: 2px solid #6B4F3F;
+  border-radius: 12px;
+}
+.cont.active{
+  display: flex;
+}
+.cont div{
+  border-radius: 6px;
+  width: 460px;
+  padding: 20px;
+  border-right: 2px solid #6B4F3F;
+  border-radius: 0px;
+}
+.cont div:last-child{
+  border-right: none;
+}
+.cont div img{
+  margin: 0 auto;
+  width: 350px;
+  height: 300px;
+}
+.cont div h2,
+.cont div h3{
+  padding: 15px 42px;
+  color: #6B4F3F;
+  text-align: left;
+}
+.cont div h2{
+  font-size: 25px;
+  font-weight: 600;
+}
+.cont div h3{
+  padding-top: 0;
+  font-size: 18px;
+}
+
+/* footer */
+.footer{
+  height: 200px;
+  display: flex;
+}
+.footer_left{
+  width: 20%;
+  display: flex;
+}
+.footer_left a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer_left img{
+  width: 150px;
+  margin-left: 50%;
+}
+.footer_middle{
+  width: 50%;
+}
+.footer_middle ul{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 18%;
+}
+.footer_middle ul li{
+  position: relative;
+  padding-top: 20px;
+}
+.footer_middle ul li+li::after{
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 1px;
+  height: 15px;
+  background-color: #F5E6CC;
+}
+.footer_middle ul li a{
+  color: #F5E6CC;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+.footer_middle span{
+  color: #F5E6CC;
+  display: block;
+  padding-left: 20%;
+  line-height: 2;
+}
+.footer_right{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  gap: 20px;
+}
+.footer_right .familysite{
+  position: relative;
+}
+.footer_right .familysite button{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  color: #F5E6CC;
+  border: 1px solid #F5E6CC;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  min-width: 140px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_right .familysite button .btn-text{
+  font-size: 14px;
+}
+.footer_right .familysite button .btn-icon{
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+.footer_right .familysite .family_inner{
+  position: absolute;
+  top: -170px;
+  left: 0;
+  min-width: 140px;
+  border-radius: 6px;
+  border: 1px solid #F5E6CC;
+  display: none;
+  background-color: #6B4F3F;
+}
+.footer_right .familysite .family_inner a{
+  color: #F5E6CC;
+  display: block;
+  padding: 10px 15px;
+}
+.footer_right .familysite button:hover{
+  background: rgba(245, 230, 204, 0.12);
+}
+.footer_right .sns{
+  white-space: nowrap;
+}
+.footer_right .sns a{
+  color: #F5E6CC;
+  font-size: 30px;
+  padding-left: 20px;
+}
